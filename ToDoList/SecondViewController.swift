@@ -20,6 +20,9 @@ class SecondViewController: UIViewController {
     // clear the text field so that the user can enter a new text
     item.text = ""
 
+    // update NSUserDefault and save our array (permanent storage)
+    NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+
   }
 
   override func viewDidLoad() {

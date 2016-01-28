@@ -19,8 +19,16 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    print("\(toDoList)")
+
+    // if NSUserDefaults called toDoList exists (!= nil)
+    // so we set our toDoList = to it ( permanent storage )
+    // otherwise we leave it empty, it means our user didn't have any items yet
+
+    if (NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil) {
+
+      toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]
+
+    }
 
   }
 
@@ -45,7 +53,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
   // reload the table data in viewDidAppear so that they are not lost when we switch from 2nd VC to 1st VC
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-
       toDoListTable.reloadData()
 
   }
