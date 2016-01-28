@@ -33,5 +33,20 @@ class SecondViewController: UIViewController {
   }
 
 
+  // Tap outside of the keyboard dismisses the keyboard
+  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    self.view.endEditing(true)
+
+  }
+
+  // close the keyboard using the button on the keyboard
+  func textFieldShouldReturn(textField: UITextField!) -> Bool {
+
+    item.resignFirstResponder()
+    return true
+  }
+
+
+
 }
 
