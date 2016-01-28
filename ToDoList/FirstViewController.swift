@@ -50,6 +50,21 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 
   }
 
+
+  func tableView(tableView: UITableView, commitEditingStyle editingStyle:
+    UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+
+      if editingStyle == UITableViewCellEditingStyle.Delete {
+
+        toDoList.removeAtIndex(indexPath.row)
+
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+
+        toDoListTable.reloadData()
+      }
+
+  }
+
   // reload the table data in viewDidAppear so that they are not lost when we switch from 2nd VC to 1st VC
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
