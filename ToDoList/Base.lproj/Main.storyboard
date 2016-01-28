@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZhW-m0-Vzy">
-                                <rect key="frame" x="-4" y="44" width="328" height="475"/>
+                                <rect key="frame" x="-4" y="61" width="328" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemCell" id="1HK-KO-Wyd">
@@ -36,8 +36,11 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="4eR-39-kqZ"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-bn-4Ph">
-                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-bn-4Ph">
+                                <rect key="frame" x="-4" y="17" width="328" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="To Do List" id="sgx-V5-slF"/>
                                 </items>
@@ -51,7 +54,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ZhW-m0-Vzy" secondAttribute="bottom" id="FHR-rz-y3z"/>
                             <constraint firstItem="ZhW-m0-Vzy" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="nbZ-q4-lqm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3C0-bn-4Ph" secondAttribute="trailing" constant="-20" id="qVL-PE-us1"/>
-                            <constraint firstItem="3C0-bn-4Ph" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="xcv-Hc-DnL"/>
+                            <constraint firstItem="3C0-bn-4Ph" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="17" id="xcv-Hc-DnL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
